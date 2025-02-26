@@ -1,0 +1,22 @@
+<form action="register.php" method="POST">
+    <input type="text" name="username" placeholder="Nama pengguna" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <select name="gender" required>
+        <option value="" disabled selected>Jenis Kelamin</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+    </select>
+    <input type="date" name="birth_date" placeholder="dd--yyyy" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <label>
+        <input type="checkbox" onclick="togglePassword()"> Lihat Password
+    </label>
+    <button type="submit">DAFTAR</button>
+</form>
+
+<script>
+    function togglePassword() {
+        const passwordField = document.querySelector('input[name="password"]');
+        passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
+    }
+</script>
